@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 部署：点亮灯泡</title>
+  <style>
+    body {
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      text-align: center;
+      padding-top: 56px;
+      background: #fafafa;
+      color: #333;
+    }
+    h2 { font-weight: 500; letter-spacing: 1px; }
+    #myImage {
+      width: 100px;
+      height: 180px;
+      cursor: pointer;
+      image-rendering: auto;
+    }
+    p { color: #666; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <h2>Demo 部署：点亮灯泡</h2>
+  <img id="myImage" onclick="changeImage()" src="images/bulb-off.png" width="100" height="180" alt="点击灯泡可开关">
+  <p>点击灯泡就可以打开或关闭这盏灯</p>
+
+  <script>
+    function changeImage() {
+      const element = document.getElementById("myImage");
+      if (element.src.includes("bulb-off")) {
+        element.src = "images/bulb-on.png";
+      } else {
+        element.src = "images/bulb-off.png";
+      }
+    }
+  </script>
+</body>
+</html>
