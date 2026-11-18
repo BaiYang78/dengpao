@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# 用法: bash push_to_github.sh <PersonalAccessToken>
-# 作用: 推送当前目录到 https://github.com/BaiYang78/dengpao
+# 用法: bash push_to_github.sh <PersonalAccessToken> [仓库名]
+# 作用: 推送当前目录到 https://github.com/BaiYang78/<仓库名>
 #       仓库不存在则自动创建；自动适配本机代理与自签证书
 set -e
 
 TOKEN="$1"
 USERNAME="BaiYang78"
-REPO="dengpao"
+REPO="${2:-dengpao}"
 NODE="C:/Users/511/.workbuddy/binaries/node/versions/22.22.2-2/node.exe"
 PROXY="${HTTPS_PROXY:-http://127.0.0.1:3135}"
 
